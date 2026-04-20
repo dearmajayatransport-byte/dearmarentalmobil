@@ -203,7 +203,7 @@ export default function AdminPage() {
 
       if (imageInput?.files?.[0]) {
         try {
-          const result = await uploadImage(imageInput.files[0], 'dearma/cars');
+          const result = await uploadImage(imageInput.files[0]);
           imageUrl = result.secure_url;
         } catch (cloudinaryError) {
           console.log('Cloudinary not configured, using placeholder');
